@@ -2,8 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    # Despliega solo cuando haces push a la rama principal (main)
-    branches: [main]
+    # AHORA SE ACTIVA CUANDO HAY UN PUSH A LA RAMA MASTER
+    branches: [master]
   
   # Permite ejecutar el flujo de trabajo manualmente desde la pestaña de Actions
   workflow_dispatch:
@@ -34,10 +34,11 @@ jobs:
           cache: yarn
 
       - name: Install dependencies
+        # Asumo que usas yarn, si usas npm, cambia el comando a 'npm ci' o 'npm install'
         run: yarn install --frozen-lockfile
 
       - name: Build website
-        run: yarn build
+        run: yarn build # Si usas npm: 'npm run build'
 
       # Prepara la carpeta 'build' para el despliegue
       - name: Setup Pages
