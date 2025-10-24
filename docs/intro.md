@@ -10,6 +10,7 @@ title: Bienvenido
 
 
 Aquí encontrarás lo necesario para comenzar tu aventura y disfrutar de una comunidad que valora la **inmersión, el respeto y la creatividad**.
+probando si hace copmmit
 
 ### ¡Comencémos!
 
